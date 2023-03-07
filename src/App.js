@@ -69,7 +69,7 @@ function App() {
           {
             todos.map((todo, index) => {
               return (
-                <TodoItem key={index} itemIndex={index} removeItem={removeTodo(index)} title={todo.title} checkItem={checkTodo(todos, index)} renameItem={rename(index)} checked={false} />
+                <TodoItem key={index} itemIndex={index} removeItem={removeTodo(index)} title={todo.title} checkItem={checkTodo(todos, index)} renameItem={rename(index)} contentEditable={true}/>
               );
             })
           }
@@ -79,7 +79,7 @@ function App() {
           {
             done.map((todo, index) => {
               return (
-                <TodoItem key={index} itemIndex={index} removeItem={removeDone(index)} title={todo.title} checkItem={checkTodo(done, index)} checked={true} />
+                <TodoItem key={index} itemIndex={index} removeItem={removeDone(index)} title={todo.title} checkItem={checkTodo(done, index)} contentEditable={false} />
               );
             })
           }
